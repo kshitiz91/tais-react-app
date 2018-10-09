@@ -1,0 +1,18 @@
+*,
+*:before,
+*:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+*{
+    font-family: "Barlow Condensed", Helvetica, sans-serif!important;
+}
+html{
+     -webkit-text-size-adjust:100%;
+     -ms-text-size-adjust:100%;
+     -webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+body{
+  margin: 0 auto;
+}
