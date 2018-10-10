@@ -5,7 +5,7 @@ import './topHeader.scss';
 
 export function TopHeader(props){
   return (
-    <div class="topHeader">
+    <div className="topHeader">
         <HyperLink url="#" title="Select Country" linkText ="Select Your Country" className="cSelect"/>
         <HyperLink url="/custSupport" title="Customer Support" linkText ="Customer Support" className="topLinks"/>
         <HyperLink url="/trackOrder" title="Track Order" linkText ="Track Your Order" className="topLinks"/>

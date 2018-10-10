@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDom from "react-dom";
 
-// Custom HyperLink (funtional Component),  you need to pass all attributes values in props 
+// Custom HyperLink (funtional Component),  you need to pass all attributes values in props
 // Added the common properties needed for a hyperlink
 export function HyperLink (props){
     const url = props.url ? props.url : '#';
@@ -14,6 +14,7 @@ export function HyperLink (props){
     return (
         <a href={url} title={title} rel={rel} target={target} className={className}>
             {linkText}
+            {props.children}
         </a>
     )
 
