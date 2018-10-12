@@ -14,7 +14,7 @@ export function InputBox (props){
     const className = props.className ? props.className: '';
 
     return (
-        <input type={type} autocomplete={autocomplete} disabled={disabled}  placeholder={placeholder} name={name} className={className}/>
+        <input type={type} autoComplete={autocomplete} disabled={disabled}  placeholder={placeholder} name={name} className={className}/>
     )
 
 }
