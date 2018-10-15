@@ -1,0 +1,14 @@
+.recmdHeadLinks{
+  a{
+    color: #000000;
+  }
+  a:hover{
+    text-decoration: none;
+  }
+  span:after{
+    content: " | ";
+  }
+  span:last-child:after{
+    content: "";
+  }
+}
