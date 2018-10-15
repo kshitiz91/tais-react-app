@@ -39,6 +39,10 @@ const config = {
             }
           }
         ]
+      },
+      {
+        test: /\.json$/,
+        loader: 'json-loader'
       }
     ]
   },
