@@ -10,6 +10,8 @@ import { PrimaryHeading } from './body/primaryheading/primaryHeading';
 import { TopBanner } from './body/categorybanners/topbanner/topBanner';
 import { HomeCategoryHead } from './body/categorylist/categoryheading/categoryHeading';
 import { HomeCategoryListing } from './body/categorylist/categorylisting/categoryListing';
+import { HomeRecmdHead } from './body/recmdhomecontainer/recmdheading/recmdHeading';
+import { HomeRecmdProd } from './body/recmdhomecontainer/recmdprod/recmdProd';
 
 import './index.scss';
 
@@ -25,6 +27,8 @@ class App extends React.Component {
         <TopBanner></TopBanner>
         <HomeCategoryHead></HomeCategoryHead>
         <HomeCategoryListing></HomeCategoryListing>
+        <HomeRecmdHead></HomeRecmdHead>
+        <HomeRecmdProd></HomeRecmdProd>
       </div>
     </div>
   );
