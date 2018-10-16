@@ -12,6 +12,9 @@ import { HomeCategoryHead } from './body/categorylist/categoryheading/categoryHe
 import { HomeCategoryListing } from './body/categorylist/categorylisting/categoryListing';
 import { HomeRecmdHead } from './body/recmdhomecontainer/recmdheading/recmdHeading';
 import { HomeRecmdProd } from './body/recmdhomecontainer/recmdprod/recmdProd';
+import { SignUpBanner } from './body/signupbanner/signUpBanner';
+import { VideoBannerHome } from './body/videobanner/videoBanner';
+import { SubscriptionBannerHome } from './body/subscriptionbanner/subscriptionArea';
 
 import './index.scss';
 
@@ -29,6 +32,9 @@ class App extends React.Component {
         <HomeCategoryListing></HomeCategoryListing>
         <HomeRecmdHead></HomeRecmdHead>
         <HomeRecmdProd></HomeRecmdProd>
+        <SignUpBanner></SignUpBanner>
+        <VideoBannerHome></VideoBannerHome>
+        <SubscriptionBannerHome></SubscriptionBannerHome>
       </div>
     </div>
   );
