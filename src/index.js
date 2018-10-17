@@ -15,13 +15,14 @@ import { HomeRecmdProd } from './body/recmdhomecontainer/recmdprod/recmdProd';
 import { SignUpBanner } from './body/signupbanner/signUpBanner';
 import { VideoBannerHome } from './body/videobanner/videoBanner';
 import { SubscriptionBannerHome } from './body/subscriptionbanner/subscriptionArea';
+import { Footer } from './body/footer/footerarea/footArea';
 
 import './index.scss';
 
 class App extends React.Component {
   render() {
   return (
-    <div>
+    <div className="content-area">
       <TopHeader></TopHeader>
       <HeaderMain></HeaderMain>
       <ShippingPromo></ShippingPromo>
@@ -36,6 +37,7 @@ class App extends React.Component {
         <VideoBannerHome></VideoBannerHome>
         <SubscriptionBannerHome></SubscriptionBannerHome>
       </div>
+      <Footer></Footer>
     </div>
   );
   }
