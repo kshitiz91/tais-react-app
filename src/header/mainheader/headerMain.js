@@ -4,6 +4,7 @@ import { HyperLink } from '../../common/hyperLink';
 import { ImageArea } from '../../common/imageArea';
 import { InputBox } from '../../common/inputBox';
 import './headerMain.scss';
+import DropDownMenu from "../megaMenu/dropDownMenu";
 
 export function HeaderMain(props){
   return (
@@ -14,7 +15,7 @@ export function HeaderMain(props){
         </HyperLink>
       </div>
       <div className="col-sm-1 text-center">
-        <div>Menu</div>
+        <div><DropDownMenu/></div>
       </div>
       <div className="col-sm-6 text-center">
         <InputBox type="text" placeholder="Enter keyword" name="searchBox" className="searchArea"/>
