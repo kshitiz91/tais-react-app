@@ -56,7 +56,8 @@ const config = {
     new LodashModuleReplacementPlugin
   ],
   devServer: {
-    contentBase: './dist'
+    contentBase: './dist',
+    historyApiFallback: true
   }
 }
 

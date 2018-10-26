@@ -2,6 +2,7 @@ import React from "react";
 import ReactDom from "react-dom";
 import { HyperLink } from '../../../../common/hyperLink';
 import { ImageArea } from '../../../../common/imageArea';
+import { Link } from 'react-router-dom';
 import './categoriesList.scss'
 
 // Custom Categories List for homepage (funtional Component),  you need to pass all attributes values in props
@@ -16,6 +17,11 @@ export function HomeCategoryList (props){
             <ImageArea alt="" height="auto" src="//raderain.sirv.com/T-Giant/Cat_Undershirts_588x400.png?format=webp" className="catListImg"/>
           </HyperLink>
           <p>{cat}</p>
+          <Link to="/catg">
+            <button type="button" className="btn btn-primary">
+                  View Products
+            </button>
+          </Link>
         </div>);
     return (
       displayCat
