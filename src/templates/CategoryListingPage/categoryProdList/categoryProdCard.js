@@ -8,14 +8,13 @@ import './categoryProdCard.scss';
 export function CategoryProdCard (props){
     const categoryProds = props.prods;
     const categoryProdsDisplay = categoryProds.map((prod,index)=>
-      <div className="col-sm-3 categoryProdItem" key={index}>
+      <div className="col-sm-3 categoryProdItem mb-3" key={index}>
         <div className="categoryProdDetail">
           <figure>
-          <ImageArea alt="" height="auto" src={prod.url} className="prodImg"/>
+          <ImageArea alt="" height="auto" src={prod.imageUrl} className="prodImg"/>
           </figure>
-          <p className="prodName">{prod.title}</p>
-          <p className="prodCat">{prod.category}</p>
-          <p className="prodCost">${prod.cost}</p>
+          <p className="prodName">{prod.name}</p>
+          <p className="prodCost">{prod.cost}</p>
         </div>
       </div>
     )

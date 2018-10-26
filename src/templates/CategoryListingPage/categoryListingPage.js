@@ -1,8 +1,18 @@
 import React, { Component } from 'react';
 import {CategoryProdCard} from './CategoryProdList/categoryProdCard';
+import axios from 'axios';
 
 export default class CategoryListingPage extends Component{
-  
+  constructor(props){
+    super(props)
+    this.state = {
+      prodList: []
+    }
+  }
+  componentDidMount(){
+    axios.get('http://demo5108170.mockable.io/getProdList')
+    .then(json => this.setState({prodList:json.data.CO}));
+  }
     render(){
       const recmdProd = [
         {
@@ -37,7 +47,7 @@ export default class CategoryListingPage extends Component{
        return(
          <div className="container">
          <div className="row mt-5"> 
-         <CategoryProdCard prods={recmdProd}></CategoryProdCard>
+         <CategoryProdCard prods={this.state.prodList}></CategoryProdCard>
          </div>
          </div>       
        );
