@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDom from "react-dom";
+import { Link } from 'react-router-dom';
 import { HyperLink } from '../../common/hyperLink';
 import { ImageArea } from '../../common/imageArea';
 import { InputBox } from '../../common/inputBox';
@@ -10,9 +11,9 @@ export function HeaderMain(props){
   return (
     <div className="headerMain row">
       <div className="col-sm-3 text-center">
-        <HyperLink url="/" title="Website Name" className="logoLink">
-          <ImageArea alt="logo" height="auto" src="https://66.media.tumblr.com/2028d8087066b1e19ab5e3c35ae550b2/tumblr_p7wo3aQqjb1s2oauno1_1280.png" width="200" className="webLogo"/>
-        </HyperLink>
+        <Link to="/">
+            <ImageArea alt="logo" height="auto" src="https://66.media.tumblr.com/2028d8087066b1e19ab5e3c35ae550b2/tumblr_p7wo3aQqjb1s2oauno1_1280.png" width="200" className="webLogo"/>
+        </Link>
       </div>
       <div className="col-sm-1 text-center">
         <div><DropDownMenu/></div>
