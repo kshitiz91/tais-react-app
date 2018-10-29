@@ -1,6 +1,6 @@
-import * as catActionType from './categoryListingPage.constant';
+import * as actionType from './categoryListingPage.actionType';
 
-export const requestProductList = (json)=>({
-	type: catActionType.FETCH_PRODUCT_LIST_REQUEST,
-	json
+export const requestSubCategoryListAction = (payload)=>({
+	type: actionType.FETCH_SUBCATEGORY_LIST_REQUEST,
+	payload
 })

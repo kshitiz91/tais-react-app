@@ -1,3 +1,2 @@
-export const FETCH_PRODUCT_LIST_REQUEST = "FETCH_PRODUCT_LIST_REQUEST";
-export const FETCH_PRODUCT_LIST_FAILURE = "FETCH_PRODUCT_LIST_FAILURE";
-export const FETCH_PRODUCT_LIST_SUCCESS = "FETCH_PRODUCT_LIST_SUCCESS";
+export const SUBCATEGORYLIST_API_ENDPOINT = 'http://demo5108170.mockable.io/getProdList';
+export const NAME = "subCategoryList";

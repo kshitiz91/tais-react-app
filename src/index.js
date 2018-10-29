@@ -1,17 +1,24 @@
-import React from "react";
+import React,{ Component } from "react";
 import ReactDOM from "react-dom";
 import { hot } from 'react-hot-loader';
 import { BrowserRouter } from 'react-router-dom';
 import {BaseLayout} from './templates/BaseLayout'
-
+import configureStore from './store/configureStore'
 import './index.scss';
+import rootSaga from './saga';
+import { Provider } from 'react-redux';
+import 'babel-polyfill';
 
-class App extends React.Component {
+const store = configureStore();
+store.runSaga(rootSaga);
+class App extends Component {
   render() {
   return (
-    <BrowserRouter>
-    <BaseLayout/>
-  </BrowserRouter>
+		<Provider store={store}>
+			<BrowserRouter>
+				<BaseLayout/>
+			</BrowserRouter>
+		</Provider>
   );
   }
 }

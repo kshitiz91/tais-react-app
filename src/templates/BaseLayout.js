@@ -8,12 +8,12 @@ import { Link } from 'react-router-dom';
 export class BaseLayout extends Component {
   render(){
     return(
-    <div className="base">
-    <TopHeader></TopHeader>
-    <HeaderMain></HeaderMain>
-    <ShippingPromo></ShippingPromo>
-    <Routes></Routes>
-  </div>
-  );
-  } 
+			<div className="base">
+				<TopHeader></TopHeader>
+				<HeaderMain></HeaderMain>
+				<ShippingPromo></ShippingPromo>
+				<Routes></Routes>
+			</div>
+  	);
+  }
 }
