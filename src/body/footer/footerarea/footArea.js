@@ -44,7 +44,7 @@ export function Footer (props){
           </div>
           <FooterLinks links={footLinks}></FooterLinks>
         </div>
-        <hr/>
+        <hr />
       </div>
     )
 }

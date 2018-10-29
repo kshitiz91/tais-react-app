@@ -11,7 +11,7 @@ import { TopBanner } from './body/categorybanners/topbanner/topBanner';
 import { HomeCategoryHead } from './body/categorylist/categoryheading/categoryHeading';
 import { HomeCategoryListing } from './body/categorylist/categorylisting/categoryListing';
 import { HomeRecmdHead } from './body/recmdhomecontainer/recmdheading/recmdHeading';
-import { HomeRecmdProd } from './body/recmdhomecontainer/recmdprod/recmdProd';
+import  HomeRecmdProd  from './body/recmdhomecontainer/recmdprod/recmdProd';
 import { SignUpBanner } from './body/signupbanner/signUpBanner';
 import { VideoBannerHome } from './body/videobanner/videoBanner';
 import { SubscriptionBannerHome } from './body/subscriptionbanner/subscriptionArea';

@@ -5,42 +5,60 @@ import { HomeRecmdProdList } from './recmdprodlist/recmdProdList'
 import './recmdProd.scss';
 // Custom Recommended Heading for homepage (funtional Component),  you need to pass all attributes values in props
 // Added the common properties needed for a hyperlink
-export function HomeRecmdProd (props){
-    const recmdProd = [
-      {
-        id: 1,
-        url: "//raderain.sirv.com/T-Giant/502F_420007110_main.png",
-        title: "Sun Drop",
-        category: "Women's Striped Loose Tank",
-        cost: "345.90"
-      },
-      {
-        id: 2,
-        url: "//raderain.sirv.com/T-Giant/502F_420007110_main.png",
-        title: "Sun Drop",
-        category: "Women's Striped Loose Tank",
-        cost: "345.90"
-      },
-      {
-        id: 3,
-        url: "//raderain.sirv.com/T-Giant/502F_420007110_main.png",
-        title: "Sun Drop",
-        category: "Women's Striped Loose Tank",
-        cost: "345.90"
-      },
-      {
-        id: 4,
-        url: "//raderain.sirv.com/T-Giant/502F_420007110_main.png",
-        title: "Sun Drop",
-        category: "Women's Striped Loose Tank",
-        cost: "345.90"
+
+class HomeRecmdProd extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      error: null,
+      isLoaded: false,
+      items: []
+    };
+  }
+
+  componentDidMount() {
+    fetch("https://demo0704402.mockable.io/test1",{
+      method: "POST",
+      body: JSON.stringify(this.state),
+      headers: {
+          'Content-Type': 'application/json'
       }
-    ];
-
-    return (
+    })
+      .then(res => res.json())
+      .then(
+        (result) => {
+          this.setState({
+            isLoaded: true,
+            items: result.items
+          });
+        },
+        // Note: it's important to handle errors here
+        // instead of a catch() block so that we don't swallow
+        // exceptions from actual bugs in components.
+        (error) => {
+          this.setState({
+            isLoaded: true,
+            error
+          });
+        }
+      )
+  }
+  render() {
+    const { error, isLoaded, items } = this.state;
+    if (error) {
+      return (<div>Error: {error.message}</div>)
+    } else if (!isLoaded) {
+      return (
+        <div>Loading</div>
+      )
+    } else {
+      return (
         <div className="row homeRecmdList">
-          <HomeRecmdProdList prods={recmdProd}></HomeRecmdProdList>
+          <HomeRecmdProdList prods={items}></HomeRecmdProdList>
         </div>
-    )
-
+      );
+    }
+  }
 }
+
+export default HomeRecmdProd;
