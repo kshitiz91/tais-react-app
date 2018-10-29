@@ -6,6 +6,7 @@ import './categoryProdCard.scss';
 // Custom Recommended Heading for homepage (funtional Component),  you need to pass all attributes values in props
 // Added the common properties needed for a hyperlink
 export function CategoryProdCard (props){
+
     const categoryProds = props.prods;
     const categoryProdsDisplay = categoryProds.map((prod,index)=>
       <div className="col-sm-3 categoryProdItem mb-3" key={index}>
