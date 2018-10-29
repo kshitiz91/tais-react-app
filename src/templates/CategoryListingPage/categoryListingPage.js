@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {CategoryProdCard} from './CategoryProdList/categoryProdCard';
+import { ProductListCard} from '../../common/ProductListCard/ProductListCard'
 import { connect } from 'react-redux';
 import  {requestSubCategoryListAction} from './categoryListingPage.action';
 
@@ -9,13 +9,13 @@ import  {requestSubCategoryListAction} from './categoryListingPage.action';
 
   }
   componentDidMount(){
-		this.props.dispatch(requestSubCategoryListAction('men'));
+		this.props.dispatch(requestSubCategoryListAction(this.props.match.params.catgId));
   }
     render(){
        return(
          <div className="container">
 					<div className="row mt-5">
- 						<CategoryProdCard prods={this.props.subCategoryList}></CategoryProdCard>
+ 						<ProductListCard prods={this.props.subCategoryList}></ProductListCard>
 					</div>
          </div>
        );

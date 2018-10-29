@@ -6,8 +6,11 @@ export default axios.create({
 
 export const getCategoryListing = (categoryId)=>{
 
-	return axios.get(constant.SUBCATEGORYLIST_API_ENDPOINT)
+	return axios.get(constant.SUBCATEGORYLIST_API_ENDPOINT, {
+    params: {
+      categoryId: categoryId
+    }})
 		.then((response) => {
-			return response.data.CO
+			return response.data.CO			
 		});
 };
