@@ -5,7 +5,7 @@ import  { HomeCategoryList } from './categorieslist/categoriesList'
 // Added the common properties needed for a hyperlink
 export function HomeCategoryListing (props){
     // const categoryHeadText = props.text ? props.text : 'Shop By Categories';
-    const catList = ['Undershirts', 'Plain Tees', 'Workwear', 'Casual'];
+    const catList = ['undershirts', 'workwear', 'casual', 'plain tees'];
 
     return (
         <div className="row">

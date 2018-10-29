@@ -9,7 +9,7 @@ const routesConfig = [
     component: Home
   },
   {
-    path: '/catg',
+    path: '/category/:catgId',
     component: CategoryListingPage,
   }
 ];
