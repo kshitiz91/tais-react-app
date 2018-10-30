@@ -12,20 +12,21 @@ import  {requestSubCategoryListAction} from './categoryListingPage.action';
 		this.props.dispatch(requestSubCategoryListAction(this.props.match.params.catgId));
   }
     render(){
+			console.log(this.props.subCategoryList)
        return(
          <div className="container">
 					<div className="row mt-5">
  						<ProductListCard prods={this.props.subCategoryList}></ProductListCard>
 					</div>
-         </div>
+				 </div>
        );
     }
 }
 
-const mapStateToProps = (subCategoryList) => {
-	return (
-		subCategoryList
-	);
+const mapStateToProps = ({categoryListPage}) => {
+	return ({
+		subCategoryList:categoryListPage.subCategoryList
+	});
 
 };
 

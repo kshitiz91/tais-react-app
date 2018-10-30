@@ -6,10 +6,12 @@
         modules: false
       }
     ],
-    'react'
+		'react'
   ],
   plugins: [
 		'react-hot-loader/babel',
-		'transform-regenerator'
+		'transform-regenerator',
+		'transform-es2015-destructuring',
+		'transform-object-rest-spread'
   ]
 }
