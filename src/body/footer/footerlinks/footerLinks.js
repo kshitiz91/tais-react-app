@@ -16,7 +16,7 @@ export function FooterLinks (props){
         <ul className="subLinks">
           {
             link.subLinks.map((subLink,index)=>
-              <li>
+              <li key={index}>
                 <Link to={subLink} >{subLink}</Link>
               </li>
             )
