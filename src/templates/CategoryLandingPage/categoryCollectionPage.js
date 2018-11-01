@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { ProductListCard} from '../../common/ProductListCard/ProductListCard'
 import { connect } from 'react-redux';
-import  {requestSubCategoryListAction} from './categoryListingPage.action';
+import  {requestSubCategoryListAction} from './categoryLandingPage.action';
 import getCatgList from '../../utils/ApiComp/ApiComp'
 
- class CategoryListingPage extends Component{
+ class CategoryLandingPage extends Component{
   constructor(props){
 		super(props);
 
@@ -31,4 +31,4 @@ const mapStateToProps = ({categoryListPage}) => {
 
 };
 
-export default connect(mapStateToProps)(CategoryListingPage);
+export default connect(mapStateToProps)(CategoryLandingPage);

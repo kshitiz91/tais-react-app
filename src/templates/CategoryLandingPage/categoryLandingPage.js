@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
-import { ProductListCard} from '../../common/ProductListCard/ProductListCard'
+import { ProductListCard} from '../../common/ProductListCard/ProductListCard';
+import { Slider} from '../../common/slider/Slider';
+import { TopBanner } from '../../common/topbanner/topBanner'
 import { connect } from 'react-redux';
-import  {requestSubCategoryListAction} from './categoryListingPage.action';
+import  {requestSubCategoryListAction} from './categoryLandingPage.action';
 import getCatgList from '../../utils/ApiComp/ApiComp'
 
- class CategoryListingPage extends Component{
+ class CategoryLandingPage extends Component{
   constructor(props){
 		super(props);
 
@@ -17,7 +19,8 @@ import getCatgList from '../../utils/ApiComp/ApiComp'
        return(
          <div className="container">
 					<div className="row mt-5">
- 						<ProductListCard prods={this.props.subCategoryList}></ProductListCard>
+						<Slider></Slider>
+ 						<TopBanner></TopBanner>
 					</div>
 				 </div>
        );
@@ -31,4 +34,4 @@ const mapStateToProps = ({categoryListPage}) => {
 
 };
 
-export default connect(mapStateToProps)(CategoryListingPage);
+export default connect(mapStateToProps)(CategoryLandingPage);
