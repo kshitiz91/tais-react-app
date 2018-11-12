@@ -134,7 +134,7 @@ export default class DropDownMenu extends Component{
 	render(){
 		return(
 		<div>
-			<button onClick={this.toggleMenu}>
+			<button onClick={this.toggleMenu} className="menu-btn">
 				Menu
 			</button>
 			{this.state.displayMenu ? (

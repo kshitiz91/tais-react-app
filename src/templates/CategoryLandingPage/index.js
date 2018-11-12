@@ -1,6 +1,7 @@
-import watchCategoryList from './categoryListingPage.saga';
-import categoryListReducer from './categoryListingPage.reducer';
-import * as constants from './categoryListingPage.constant';
+import watchCategoryLanding from './categoryLandingPage.saga';
+import categoryLandingReducer from './categoryLandingPage.reducer';
+import * as constants from './categoryLandingPage.constant';
 
-export default { categoryListReducer, constants, watchCategoryList};
+
+export default { categoryLandingReducer, constants, watchCategoryLanding};
 

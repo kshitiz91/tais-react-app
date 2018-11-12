@@ -1,16 +1,13 @@
 import axios from 'axios';
 import * as constant from './categoryLandingPage.constant';
-export default axios.create({
-  baseURL: `http://jsonplaceholder.typicode.com/`
-});
 
-export const getCategoryListing = (categoryId)=>{
+export const getCategoryLanding = (categoryId)=>{
 
-	return axios.get(constant.SUBCATEGORYLIST_API_ENDPOINT, {
+	return axios.get(constant.CATGEROY_LANDING_API_ENDPOINT, {
     params: {
       categoryId: categoryId
     }})
 		.then((response) => {
-			return response.data.CO			
+      return (response.data);	
 		});
 };

@@ -1,8 +1,7 @@
-export type SubCategory = {
+export type categoryContent = {
 	id?:number;
 	name: string;
 	imageUrl: string;
-	cost: string;
 };
 
-export type State = SubCategory[];
+export type State = categoryContent[];

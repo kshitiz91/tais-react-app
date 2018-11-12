@@ -41,7 +41,7 @@ export function HomeRecmdProd (props){
     return (
         <div className="row homeRecmdList">
           <ProductListCard prods={recmdProd}></ProductListCard>
-          <b><Link to='/categoryLandingPage/undershirts'>Link</Link></b>
+          <b><Link to='/categoryLandingPage/men'>Link</Link></b>
         </div>
     )
 

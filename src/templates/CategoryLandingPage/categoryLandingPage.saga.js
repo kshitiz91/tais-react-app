@@ -1,18 +1,18 @@
 import {takeLatest, put, call} from 'redux-saga/effects';
 import * as actionType from './categoryLandingPage.actionType';
-import {getCategoryListing}  from './categoryLandingPage.api';
-import {SubCategory} from './categoryLandingPage.model';
+import {getCategoryLanding}  from './categoryLandingPage.api';
+import {categoryContent} from './categoryLandingPage.model';
 
-function* getCategoryListSaga({payload}){
+function* getCategoryContentSaga({payload}){
 	try{
-		const subCategoryList: SubCategory = yield call(getCategoryListing,payload);
-		yield put({type: actionType.FETCH_SUBCATEGORY_LIST_SUCCESS, subCategoryList});
+		const categoryContent: categoryContent = yield call(getCategoryLanding,payload);
+		yield put({type: actionType.FETCH_CATEGORY_LANDING_SUCCESS, categoryContent});
 	}
 	catch(error){
-		yield put({type: actionType.FETCH_SUBCATEGORY_LIST_FAILURE, error});
+		yield put({type: actionType.FETCH_CATEGORY_LANDING_FAILURE, error});
 	}
 }
 
-export default function* watchCategoryList(){
-	yield takeLatest(actionType.FETCH_SUBCATEGORY_LIST_REQUEST, getCategoryListSaga);
+export default function* watchCategoryLanding(){
+	yield takeLatest(actionType.FETCH_CATEGORY_LANDING_REQUEST, getCategoryContentSaga);
 }

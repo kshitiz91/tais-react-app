@@ -1,8 +1,5 @@
 import axios from 'axios';
 import * as constant from './categoryListingPage.constant';
-export default axios.create({
-  baseURL: `http://jsonplaceholder.typicode.com/`
-});
 
 export const getCategoryListing = (categoryId)=>{
 
