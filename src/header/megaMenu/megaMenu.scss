@@ -1,3 +1,18 @@
+.menu-btn{
+	border:1px solid #25a2a6;
+	background: #fff;
+	cursor: pointer;
+	padding: 10px 20px;
+	border-radius: 10px;
+	outline: none;
+	transition: all 0.5s linear;
+	box-shadow: 1px 1px 2px 0 rgba(0,0,0,0.1);
+	outline: none !important;
+	&:hover{
+		background: #25a2a6;
+		color: #fff;
+	}
+}
 .custom-nav {
 	position: fixed;
 	width: 90%;

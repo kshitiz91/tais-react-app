@@ -1,30 +1,34 @@
 .topHeader{
   width: 100%;
-  background: #000000;
+  background: #fff;
   color: #FFFFFF;
   height: auto;
-  padding: 10px 25px;
+  padding: 2px 25px;
   text-align: right;
+  border-bottom: 1px solid #eaeaea;
   .cSelect{
-    color: #FFFFFF;
+    color: #343434;
     padding: 10px;
     float: left;
     text-decoration: none;
     display: inline-block;
+    font-size: 12px;
   }
   .topLinks{
     color: #a6afc1;
     padding: 10px;
     text-decoration: none;
     display: inline-block;
+    font-size: 12px;
   }
   .topLinks:hover{
-    color: #FFFFFF;
+    color: #343434;
   }
   .accLinks{
-    color: #FFFFFF;
+    color:#343434;
     padding: 10px;
     text-decoration: none;
     display: inline-block;
+    font-size: 12px;
   }
 }

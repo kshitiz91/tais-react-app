@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDom from "react-dom";
 import './topBanner.scss';
-import { Card } from '../../../common/card-column/card';
+import { Card } from '../card-column/card';
 import values from './topBannerImages.json';
 
 //import './topBannerImages.json

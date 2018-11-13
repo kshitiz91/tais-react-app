@@ -9,9 +9,10 @@
 		'react'
   ],
   plugins: [
-		'react-hot-loader/babel',
-		'transform-regenerator',
-		'transform-es2015-destructuring',
-		'transform-object-rest-spread'
+		"react-hot-loader/babel",
+		"transform-regenerator",
+		"transform-es2015-destructuring",
+    "transform-object-rest-spread",
+    "syntax-dynamic-import"
   ]
 }

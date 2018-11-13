@@ -1,18 +1,7 @@
 import React, { Component } from 'react';
-import { Switch,Route, IndexRoute } from 'react-router';
-import Home from '../templates/home/Home';
-import CategoryListingPage from '../templates/CategoryListingPage/categoryListingPage';
+import { Switch,Route } from 'react-router';
+import routesConfig from './routesConfig';
 
-const routesConfig = [
-  {
-    path: '/',
-    component: Home
-  },
-  {
-    path: '/category/:catgId',
-    component: CategoryListingPage,
-  }
-];
 const Routes = () => (  
       <div>
         <Switch>

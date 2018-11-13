@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { ProductListCard} from '../../common/ProductListCard/ProductListCard'
 import { connect } from 'react-redux';
 import  {requestSubCategoryListAction} from './categoryListingPage.action';
+import getCatgList from '../../utils/ApiComp/ApiComp'
 
  class CategoryListingPage extends Component{
   constructor(props){
@@ -9,10 +10,10 @@ import  {requestSubCategoryListAction} from './categoryListingPage.action';
 
   }
   componentDidMount(){
+	  console.log(this.props.match.params.catgId);
 		this.props.dispatch(requestSubCategoryListAction(this.props.match.params.catgId));
   }
-    render(){
-			console.log(this.props.subCategoryList)
+    render(){			
        return(
          <div className="container">
 					<div className="row mt-5">

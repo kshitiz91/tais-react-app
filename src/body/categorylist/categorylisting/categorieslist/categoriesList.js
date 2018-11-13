@@ -13,15 +13,17 @@ export function HomeCategoryList (props){
     //alert(list.length);
     const displayCat = list.map((cat, index) =>
         <div key={index} className="col-sm-3 catListItem">
+         <div className="catListPanel">
           <HyperLink url="#" title="category" className="catListLink">
-            <ImageArea alt="" height="auto" src="//raderain.sirv.com/T-Giant/Cat_Undershirts_588x400.png?format=webp" className="catListImg"/>
-          </HyperLink>
-          <p className="text-capitalize">{cat}</p>
-          <Link to={`/category/${cat}`}>
-            <button type="button" className="btn btn-primary">
-                  View Products
-            </button>
-          </Link>
+              <ImageArea alt="" height="auto" src="//raderain.sirv.com/T-Giant/Cat_Undershirts_588x400.png?format=webp" className="catListImg"/>
+            </HyperLink>
+            <p className="text-capitalize">{cat}</p>
+            <Link to={`/category/${cat}`}>
+              <button type="button" className="btn btn-primary">
+                    View Products
+              </button>
+            </Link>
+         </div>
         </div>);
     return (
       displayCat

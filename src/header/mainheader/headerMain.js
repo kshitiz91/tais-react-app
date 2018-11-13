@@ -21,9 +21,9 @@ export function HeaderMain(props){
       <div className="col-sm-6 text-center">
         <InputBox type="text" placeholder="Enter keyword" name="searchBox" className="searchArea"/>
       </div>
-      <div className="col-sm-2 text-center">
-        <span className="float-left">Store<ImageArea alt="store" height="auto" src="http://www.pngall.com/wp-content/uploads/2017/05/Map-Marker.png" width="50" className="storeIcon"/></span>
-        <span className="float-right">Cart<ImageArea alt="cart" height="auto" src="https://mbtskoudsalg.com/images/shop-button-png-4.png" width="50" className="cartIcon"/></span>
+      <div className="col-sm-2 text-center header-right">
+        <span><ImageArea alt="store" height="auto" src="http://www.pngall.com/wp-content/uploads/2017/05/Map-Marker.png" width="50" className="storeIcon"/>Store</span>
+        <span><ImageArea alt="cart" height="auto" src="https://mbtskoudsalg.com/images/shop-button-png-4.png" width="50" className="cartIcon"/>Cart</span>
       </div>
     </div>
   )

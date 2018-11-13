@@ -7,7 +7,8 @@ const config = {
   entry: ['babel-polyfill','./src/index.js'],
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js'
+    filename: 'bundle.js',
+    publicPath: '/'
   },
   module: {
     rules: [
@@ -31,19 +32,15 @@ const config = {
         ]
       },
       {
-        test: /\.png$/,
+        test: /\.png|jpg|gif$/,
         use: [
           {
             loader: 'url-loader',
             options: {
-              mimetype: 'image/png'
+              name: '[path][name]-[hash:8].[ext]'
             }
           }
         ]
-      },
-      {
-        test: /\.json$/,
-        loader: 'json-loader'
       }
     ]
   },
