@@ -9,23 +9,18 @@ export class Slider extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      images: [],
       currentIndex: 0,
       translateValue: 0
     };
     this.goToPrevSlide = this.goToPrevSlide.bind(this);
-    this.goToNextSlide = this.goToNextSlide.bind(this);     
+    this.goToNextSlide = this.goToNextSlide.bind(this);
   }
   componentDidMount(){
-    console.log(this.props.images);
-    this.setState({
-      image: this.props.images
-    })
   }
   goToPrevSlide(){
     if(this.state.currentIndex === 0)
       return;
-    
+
     this.setState(prevState => ({
       currentIndex: prevState.currentIndex - 1,
       translateValue: prevState.translateValue + this.slideWidth()
@@ -35,13 +30,13 @@ export class Slider extends React.Component {
     // Exiting the method early if we are at the end of the images array.
     // We also want to reset currentIndex and translateValue, so we return
     // to the first image in the array.
-    if(this.state.currentIndex === this.state.images.length - 1) {
+    if(this.state.currentIndex === this.props.images.length - 1) {
       return this.setState({
         currentIndex: 0,
         translateValue: 0
       })
     }
-    
+
     // This will not run if we met the if condition above
     this.setState(prevState => ({
       currentIndex: prevState.currentIndex + 1,
@@ -52,7 +47,7 @@ export class Slider extends React.Component {
   slideWidth(){
      return document.querySelector('.slide').clientWidth
   }
-  
+
 
   render() {
     return (
@@ -64,7 +59,7 @@ export class Slider extends React.Component {
             transition: 'transform ease-out 0.45s'
           }}>
             {
-              this.state.images.map((image, i) => (
+              this.props.images.map((image, i) => (
                 <Slide key={i} image={image} />
               ))
             }
