@@ -1,5 +1,4 @@
 import React from "react";
-import ReactDom from "react-dom";
 
 // Custom Category Heading for homepage (funtional Component),  you need to pass all attributes values in props
 // Added the common properties needed for a hyperlink

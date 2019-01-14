@@ -15,8 +15,6 @@ export class Slider extends React.Component {
     this.goToPrevSlide = this.goToPrevSlide.bind(this);
     this.goToNextSlide = this.goToNextSlide.bind(this);
   }
-  componentDidMount(){
-  }
   goToPrevSlide(){
     if(this.state.currentIndex === 0)
       return;

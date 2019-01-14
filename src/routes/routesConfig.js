@@ -1,4 +1,4 @@
-import React, {lazy, Suspense} from 'react';
+import React from 'react';
 import Loadable from 'react-loadable';
 import {Loader} from '../common/loader/loader';
 
@@ -7,21 +7,21 @@ import {Loader} from '../common/loader/loader';
 const CategoryListingComponent = lazy(() => import('../templates/CategoryListingPage/categoryListingPage'));
  */
 const HomeComponent = Loadable({
-  loader: () => import('../templates/home/Home'),
-  loading: () => <Loader></Loader>,
-  delay: 2000
+	loader: () => import(/*webpackChunkName: "home"*/'../templates/home/Home'),
+	loading: () => <Loader></Loader>,
+	modules: ['home']
 });
 
 const CategoryListingComponent = Loadable({
-   loader: () => import('../templates/CategoryListingPage/categoryListingPage'),
- 	loading: () => <Loader></Loader>,
-   delay: 2000
+   loader: () => import( /*webpackChunkName: "categorylisting"*/ '../templates/CategoryListingPage/categoryListingPage'),
+	 loading: () => <Loader></Loader>,
+	 modules: ['categorylisting']
  });
 
  const CategoryLandingComponent = Loadable({
-  loader: () => import('../templates/CategoryLandingPage/categoryLandingPage'),
-  loading: () => <Loader></Loader>,
-  delay: 2000
+  loader: () => import( /*webpackChunkName: "categorylanding"*/ '../templates/CategoryLandingPage/categoryLandingPage'),
+	loading: () => <Loader></Loader>,
+	modules: ['categorylanding']
 });
 const routesConfig = [
     {

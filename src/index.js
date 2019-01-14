@@ -8,8 +8,12 @@ import './index.scss';
 import rootSaga from './saga';
 import { Provider } from 'react-redux';
 import 'babel-polyfill';
+import Loadable from 'react-loadable';
 
-const store = configureStore();
+const preloadedState = window.__PRELOADED_STATE__ || {};
+delete window.__PRELOADED_STATE__;
+
+const store = configureStore(preloadedState);
 store.runSaga(rootSaga);
 class App extends Component {
   render() {
@@ -26,4 +30,7 @@ class App extends Component {
 const AppWithHot = hot(module)(App);
 
 var mountNode = document.getElementById("app");
-ReactDOM.render(<AppWithHot/>, mountNode);
+ Loadable.preloadReady().then(()=>{
+	ReactDOM.hydrate( <AppWithHot/> , mountNode);
+ }).catch(()=>console.log('document has error'));
+

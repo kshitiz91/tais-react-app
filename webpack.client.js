@@ -1,13 +1,16 @@
 const webpack = require('webpack');
 const path = require('path');
 const LodashModuleReplacementPlugin = require('lodash-webpack-plugin');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const ReactLoadableWebpack = require('react-loadable/webpack');
 
-
-const config = {
+module.exports = {
   entry: ['babel-polyfill','./src/index.js'],
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js',
+		filename: 'bundle.js',
+		chunkFilename: '[name].js',
     publicPath: '/'
   },
   module: {
@@ -20,7 +23,8 @@ const config = {
       {
         test: /\.scss$/,
         use: [
-          'style-loader',
+					'style-loader',
+					MiniCssExtractPlugin.loader,
           'css-loader',
           'sass-loader'
         ]
@@ -51,7 +55,19 @@ const config = {
     ]
   },
   plugins: [
-    new LodashModuleReplacementPlugin
+		new LodashModuleReplacementPlugin,
+		new MiniCssExtractPlugin({
+			filename: 'style.css',
+		}),
+		new HtmlWebpackPlugin({
+      inject: false,
+      hash: true,
+      template: './src/index.html',
+      filename: 'index.html'
+		}),
+		new ReactLoadableWebpack.ReactLoadablePlugin({
+			filename: 'react-loadable.json'
+		})
   ],
   devServer: {
     contentBase: './dist',
@@ -59,4 +75,3 @@ const config = {
   }
 }
 
-module.exports = config;
