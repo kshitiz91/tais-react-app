@@ -1,5 +1,4 @@
 import React from "react";
-import ReactDom from "react-dom";
 import { HyperLink } from '../../../../common/hyperLink';
 import { ImageArea } from '../../../../common/imageArea';
 import { Link } from 'react-router-dom';

@@ -1,7 +1,6 @@
 import React from "react";
 import ReactDom from "react-dom";
 import { Link } from 'react-router-dom';
-import { HyperLink } from '../../common/hyperLink';
 import { ImageArea } from '../../common/imageArea';
 import { InputBox } from '../../common/inputBox';
 import './headerMain.scss';
