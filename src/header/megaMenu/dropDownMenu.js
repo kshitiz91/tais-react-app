@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import L1Categories from './L1Categories';
+import Button from '@material-ui/core/Button';
 import './megaMenu.scss';
 export default class DropDownMenu extends Component{
 	constructor(props){
@@ -134,9 +135,14 @@ export default class DropDownMenu extends Component{
 	render(){
 		return(
 		<div>
-			<button onClick={this.toggleMenu} className="menu-btn">
+			< Button onClick = {
+				this.toggleMenu
+			}
+			className = "menu-btn"
+			variant = "contained"
+			color = "primary" >
 				Menu
-			</button>
+			</Button>
 			{this.state.displayMenu ? (
 				<nav className="custom-nav">
 					<div>
