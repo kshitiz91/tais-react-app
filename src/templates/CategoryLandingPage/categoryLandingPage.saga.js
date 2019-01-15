@@ -5,7 +5,7 @@ import {categoryContent} from './categoryLandingPage.model';
 
 function* getCategoryContentSaga({payload}){
 	try{
-		const categoryContent: categoryContent = yield call(getCategoryLanding,payload);
+		const categoryContent = yield call(getCategoryLanding,payload);
 		yield put({type: actionType.FETCH_CATEGORY_LANDING_SUCCESS, categoryContent});
 	}
 	catch(error){

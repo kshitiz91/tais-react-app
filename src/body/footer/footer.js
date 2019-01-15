@@ -3,10 +3,8 @@ import ReactDom from "react-dom";
 import { Link } from 'react-router-dom';
 
 import './footer.scss';
-import { HyperLink } from '../../common/hyperLink';
 import { ImageArea } from '../../common/imageArea';
 import { FooterLinks } from './footerlinks/footerLinks';
-//import './topBannerImages.json
 
 // Custom Footer (funtional Component),  you need to pass all attributes values in props
 export function Footer (props){
